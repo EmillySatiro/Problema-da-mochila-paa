@@ -1,0 +1,1 @@
+#include "dinamica.h"
