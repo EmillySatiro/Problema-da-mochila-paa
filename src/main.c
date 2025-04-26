@@ -3,19 +3,6 @@
 #include <string.h>
 #include "Mochila_Dinamica/dinamica.h"
 
-void imprimirMemoriaUsada() {
-  FILE* arquivo = fopen("/proc/self/status", "r");
-  char linha[128];
-
-  while (fgets(linha, sizeof(linha), arquivo)) {
-      if (strncmp(linha, "VmRSS:", 6) == 0) {
-          printf("%s", linha);
-          break;
-      }
-  }
-  fclose(arquivo);
-}
-
 int main() {
 
     printf("=-=-=-=-=-=-=-Mochila Dinamica-=-=-=-=-=-=-=\n");
@@ -42,14 +29,8 @@ int main() {
 
     resolverMochila(numeroItens, capacidadeMochila, pesos, valores);
 
-    // printf("Memoria usada:\n");
-    // imprimirMemoriaUsada();                      Só da certo no linux
-    // printf("Pressione Enter para continuar...");
-
     free(pesos);
     free(valores);
-
-
 
     return 0;
 }
