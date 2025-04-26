@@ -7,4 +7,5 @@ void imprimirTabelaItens(int numeroItens, int **tabela, int pesos[], int valores
 
 void liberarTabela(int **tabela, int numeroItens);
 
+void imprimirItensSelecionados(int numeroItens, int capacidadeMochila, int pesos[], int valores[]);
 #endif

@@ -1,6 +1,7 @@
 #include "utils.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "../Mochila_recursiva/recursiva.h"
 
 int max(int a, int b) {
   return (a > b) ? a : b;
@@ -26,4 +27,25 @@ void imprimirTabelaItens(int numeroItens, int **tabela, int pesos[], int valores
       }
   }
   printf("\n");
+}
+
+void imprimirItensSelecionados(int numeroItens, int capacidadeMochila, int pesos[], int valores[]) {
+  if (numeroItens == 0 || capacidadeMochila == 0) {
+      return;
+  }
+  
+  if (pesos[numeroItens - 1] > capacidadeMochila) {
+      imprimirItensSelecionados(numeroItens - 1, capacidadeMochila, pesos, valores);
+  } 
+  else {
+      int incluirItem = valores[numeroItens - 1] + mochilaRecursiva(numeroItens - 1, capacidadeMochila - pesos[numeroItens - 1], pesos, valores);
+      int excluirItem = mochilaRecursiva(numeroItens - 1, capacidadeMochila, pesos, valores);
+      
+      if (incluirItem > excluirItem) {
+          printf("Item %d | Peso %d | Valor %d\n", numeroItens, pesos[numeroItens - 1], valores[numeroItens - 1]);
+          imprimirItensSelecionados(numeroItens - 1, capacidadeMochila - pesos[numeroItens - 1], pesos, valores); // Chama recursivamente para os itens restantes
+      } else {
+          imprimirItensSelecionados(numeroItens - 1, capacidadeMochila, pesos, valores); // Se não incluir o item, vai para o próximo
+      }
+  }
 }
