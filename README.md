@@ -27,9 +27,19 @@ O repositório está organizado da seguinte forma:
    git clone https://github.com/seu-usuario/problema-da-mochila.git
    ```
 
-
 ### Execução
 
+Se for a primeira vez executando, pode ser necessário dar permissão ao script. Para isso,use o comando:
+
+```bash
+   chmod +x ./build.sh  
+```
+
+Navegue até a raiz do projeto e execute o comando:
+
+```bash
+   ./build.sh             # Executa o script para compilar e rodar o programa
+```
 ## Cenários de Testes
 
 Os testes foram realizados utilizando os seguintes parâmetros:
