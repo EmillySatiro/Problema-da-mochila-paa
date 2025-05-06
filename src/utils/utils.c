@@ -5,9 +5,7 @@
 #include "../Mochila_recursiva/recursiva.h"
 #include "../Mochila_Dinamica/dinamica.h"
 
-int max(int a, int b) {
-  return (a > b) ? a : b;
-}
+
 
 void liberarTabela(int **tabela, int numeroItens) {
   for (int i = 0; i <= numeroItens; i++) {
@@ -104,3 +102,10 @@ void metodoDinamicaRecursivaMemo(int numeroItens, int capacidadeMochila, int pes
   liberarTabela(tabela, numeroItens);
   printf("====================================================\n");
 }
+
+
+
+int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+

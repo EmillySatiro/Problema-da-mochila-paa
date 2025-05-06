@@ -8,3 +8,5 @@ int mochilaRecursivaComMemo(int item, int capacidadeAtual, int pesos[], int valo
 int **resolverMochilaRecursiva(int numeroItens, int capacidadeMochila, int pesos[], int valores[], int *valorMaximo);
 
 #endif
+
+

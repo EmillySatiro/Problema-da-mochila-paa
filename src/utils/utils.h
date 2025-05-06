@@ -21,3 +21,10 @@ void metodoDinamicaRecursivaSimples(int numeroItens, int capacidadeMochila, int 
   
 void metodoDinamicaRecursivaMemo(int numeroItens, int capacidadeMochila, int pesos[], int valores[]);
 #endif
+
+#ifndef UTILS_H
+#define UTILS_H
+
+int max(int a, int b);
+
+#endif
