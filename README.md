@@ -1,7 +1,7 @@
 
 # Análise Comparativa: Algoritmos de Programação Dinâmica no Problema da Mochila
 
-Este repositório contém a implementação de uma **análise comparativa** entre dois algoritmos para resolver o **Problema da Mochila**: um utilizando a abordagem **recursiva** e outro utilizando **programação dinâmica (memorização)**. O objetivo é comparar o desempenho de ambos os métodos em termos de **tempo de execução** e **uso de memória**.
+Este repositório apresenta uma análise comparativa entre duas abordagens para resolver o Problema da Mochila (Knapsack Problem): uma implementação recursiva e outra utilizando programação dinâmica com memorização. O objetivo é avaliar o desempenho de ambas em termos de tempo de execução e uso de memória.
 
 ## Objetivo
 
@@ -15,7 +15,11 @@ A análise compara o desempenho de ambos os algoritmos em diferentes cenários d
 
 O repositório está organizado da seguinte forma:
 
+**main.py**: Script principal contendo as implementações dos algoritmos e a lógica para execução dos testes comparativos.
 
+**tempos_mochila_comparativo.csv**: Arquivo CSV contendo os resultados dos testes, incluindo tempos de execução e uso de memória.
+
+**README.md**: Este arquivo, fornecendo informações sobre o projeto.
 
 ## Como Compilar e Executar
 
@@ -26,44 +30,15 @@ O repositório está organizado da seguinte forma:
    ```bash
    git clone https://github.com/seu-usuario/problema-da-mochila.git
    ```
+2. Certifique-se de ter o Python instalado (versão 3.6 ou superior).
 
-### Execução
+3. Execute o script principal `main.py` para compilar e executar os algoritmos:
 
-Se for a primeira vez executando, pode ser necessário dar permissão ao script. Para isso,use o comando:
+   ```bash
+   python main.py
+   ```
+4. O script irá gerar um arquivo CSV com os resultados dos testes, incluindo tempos de execução e uso de memória.
 
-```bash
-   chmod +x ./build.sh  
-```
+### Resultados
+A análise comparativa revelou que a abordagem com programação dinâmica apresenta desempenho superior em termos de tempo de execução e uso de memória, especialmente em instâncias maiores do problema. A memorização evita recomputações desnecessárias, tornando o algoritmo mais eficiente.
 
-Navegue até a raiz do projeto e execute o comando:
-
-```bash
-   ./build.sh             # Executa o script para compilar e rodar o programa
-```
-## Cenários de Testes
-
-Os testes foram realizados utilizando os seguintes parâmetros:
-
-- **Pesos dos itens**: `{}`
-- **Valores dos itens**: `{}`
-- **Capacidade da mochila**: `0`
-
-
-## Análise de Desempenho
-
-### Critérios de Comparação
-
-O desempenho dos dois algoritmos será comparado considerando os seguintes critérios:
-
-- **Tempo de Execução**: O tempo total necessário para calcular a solução.
-- **Memória Consumida**: A quantidade de memória utilizada durante a execução de ambos os algoritmos.
-
-## Detalhes Adicionais
-
-### Algoritmo Recursivo
-
-A implementação recursiva resolve o problema de forma simples, mas com alta complexidade. Ela explora todas as possibilidades de escolha dos itens, recalculando subproblemas múltiplas vezes.
-
-### Algoritmo com Programação Dinâmica
-
-A versão com **programação dinâmica** armazena os resultados de subproblemas em uma tabela e os reutiliza quando necessário, aumentando a eficiência do algoritmo. Esta abordagem evita a redundância do método recursivo e garante um tempo de execução significativamente menor.
